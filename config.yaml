@@ -1,0 +1,16 @@
+cookie:
+  expiry_days: 30
+  key: statiso_secret_key_change_me
+  name: statiso_auth
+
+credentials:
+  usernames:
+    admin:
+      email: admin@statiso.app
+      failed_login_attempts: 0
+      first_name: Admin
+      last_name: User
+      logged_in: false
+      password: $2b$12$wBAUib/7GOtdILgt2BNfCeIQ5yvBWYD/bBkTBkTY/AEGZ0QBDa40m
+      roles:
+        - admin
