@@ -5,12 +5,12 @@ cookie:
 
 credentials:
   usernames:
-    admin:
-      email: admin@statiso.app
+    LXS:
+      email: lxs@example.com
       failed_login_attempts: 0
-      first_name: Admin
+      first_name: LXS
       last_name: User
       logged_in: false
-      password: $2b$12$wBAUib/7GOtdILgt2BNfCeIQ5yvBWYD/bBkTBkTY/AEGZ0QBDa40m
+      password: $2b$12$qnXXggJi.Ie7886qQJhk/e9gVIUe7XMrPewlWwskQamA93YL0veFm
       roles:
         - admin

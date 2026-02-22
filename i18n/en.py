@@ -6,7 +6,7 @@ STRINGS: dict[str, str] = {
     # ──────────────────────────────────────────────
     "app.title": "StatISO",
     "app.subtitle": "Statistical analysis according to ISO standards",
-    "app.version": "v1.0",
+    "app.version": "v2.0",
     "nav.home": "Home",
     "nav.ci": "Confidence Interval",
     "nav.ti": "Tolerance Interval",

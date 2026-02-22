@@ -1,0 +1,81 @@
+/* Masquer elements Streamlit inutiles */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+.stDeployButton {display: none;}
+[data-testid="stToolbar"] {display: none;}
+
+/* Titres */
+h1, h2, h3 {
+    color: #004b87;
+}
+
+/* --- Sidebar --- */
+[data-testid="stSidebar"] .stRadio > div {
+    gap: 6px;
+}
+[data-testid="stSidebar"] hr {
+    margin: 4px 0;
+}
+
+/* --- Boutons Primary --- */
+button[kind="primary"] {
+    background-color: #004b87 !important;
+    color: white !important;
+    border: 1px solid #004b87 !important;
+}
+button[kind="primary"]:hover {
+    background-color: #003366 !important;
+}
+
+/* --- Metrics --- */
+[data-testid="stMetric"] {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px;
+    border-left: 4px solid #004b87;
+}
+
+/* --- Boutons de navigation flottants (haut/bas) --- */
+.nav-button {
+    position: fixed;
+    right: 30px;
+    z-index: 9999;
+    background-color: #004b87;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    color: white !important;
+    font-size: 22px;
+    line-height: 1;
+}
+.nav-button:hover {
+    background-color: #003366;
+    transform: scale(1.1);
+    color: white !important;
+}
+.back-to-top {
+    bottom: calc(50% + 30px);
+}
+.scroll-to-bottom {
+    bottom: calc(50% - 30px);
+}
+
+/* --- Masquer favicons des liens externes --- */
+a[href^="http"]::before,
+a[href^="https"]::before {
+    display: none !important;
+    content: none !important;
+}
+.stMarkdown a img,
+[data-testid="stMarkdownContainer"] a img {
+    display: none !important;
+}
