@@ -11,6 +11,7 @@ import streamlit as st
 from core.iso2602 import ConfidenceInterval
 from core.iso16269 import ToleranceInterval
 from core.capability import ProcessCapability
+from app._common import inject_custom_css, inject_bottom_anchor
 from data.report import ReportGenerator
 from i18n import t
 
@@ -26,6 +27,7 @@ if not st.session_state.get("authentication_status"):
 # Title
 # ---------------------------------------------------------------------------
 
+inject_custom_css()
 st.title(t("sim.title"))
 
 # ---------------------------------------------------------------------------
@@ -298,3 +300,5 @@ elif simulation == t("sim.coverage"):
         )
 
         st.info(t("sim.obs_coverage"))
+
+inject_bottom_anchor()

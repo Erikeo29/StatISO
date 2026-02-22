@@ -12,6 +12,7 @@ import streamlit as st
 from core.constants import get_k_factor
 from core.iso16269 import ToleranceInterval
 from core.normality import check_normality, remove_outliers
+from app._common import inject_custom_css, inject_bottom_anchor
 from data.handler import DataHandler
 from data.report import ReportGenerator
 from i18n import t
@@ -29,6 +30,7 @@ if not st.session_state.get("authentication_status"):
 # ---------------------------------------------------------------------------
 
 st.set_page_config(page_title=t("nav.ti"), page_icon="\U0001F4CA", layout="wide")
+inject_custom_css()
 st.title(t("ti.title"))
 
 # ---------------------------------------------------------------------------
@@ -302,3 +304,5 @@ if st.button(t("ti.calculate"), type="primary"):
         file_name="ti_results.xlsx",
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
     )
+
+inject_bottom_anchor()

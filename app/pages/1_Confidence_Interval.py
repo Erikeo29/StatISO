@@ -12,6 +12,7 @@ from scipy import stats as sp_stats
 
 from core.constants import get_t_value
 from core.iso2602 import ConfidenceInterval
+from app._common import inject_custom_css, inject_bottom_anchor
 from data.handler import DataHandler
 from data.report import ReportGenerator
 from i18n import t
@@ -29,6 +30,7 @@ if not st.session_state.get("authentication_status"):
 # ---------------------------------------------------------------------------
 
 st.set_page_config(page_title=t("nav.ci"), page_icon="\U0001F4CA", layout="wide")
+inject_custom_css()
 st.title(t("ci.title"))
 
 # ---------------------------------------------------------------------------
@@ -210,3 +212,5 @@ if st.button(t("ci.calculate"), type="primary"):
         file_name="ci_results.xlsx",
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
     )
+
+inject_bottom_anchor()

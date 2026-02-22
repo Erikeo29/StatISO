@@ -8,6 +8,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 import pandas as pd
 import streamlit as st
 
+from app._common import inject_custom_css, inject_bottom_anchor
 from i18n import t, get_lang
 
 # ---------------------------------------------------------------------------
@@ -17,6 +18,8 @@ from i18n import t, get_lang
 if not st.session_state.get("authentication_status"):
     st.warning("Please log in from the Home page.")
     st.stop()
+
+inject_custom_css()
 
 # ---------------------------------------------------------------------------
 # Collect glossary term keys dynamically
@@ -177,3 +180,5 @@ elif section == t("doc.glossary"):
         st.table(glossary_df)
     else:
         st.info(t("common.no_data"))
+
+inject_bottom_anchor()

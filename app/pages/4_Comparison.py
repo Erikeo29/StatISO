@@ -11,6 +11,7 @@ import streamlit as st
 
 from core.iso2602 import ConfidenceInterval
 from core.iso16269 import ToleranceInterval
+from app._common import inject_custom_css, inject_bottom_anchor
 from data.report import ReportGenerator
 from i18n import t
 
@@ -26,6 +27,7 @@ if not st.session_state.get("authentication_status"):
 # Title
 # ---------------------------------------------------------------------------
 
+inject_custom_css()
 st.title(t("comp.title"))
 
 # ---------------------------------------------------------------------------
@@ -207,3 +209,5 @@ elif objective == t("comp.obj_lot"):
     st.success(t("comp.rec_both"))
 elif objective == t("comp.obj_capability"):
     st.success(t("comp.rec_ti"))
+
+inject_bottom_anchor()
